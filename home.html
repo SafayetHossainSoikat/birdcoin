@@ -183,5 +183,21 @@
 
     <script src="material/js/js.js"></script>
     <script src="material/js/main.js"></script>
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    try {
+        const adexiumWidget = new AdexiumWidget({
+            wid: 'c006444f-e803-42e1-b0c2-9fe62209e46a',
+            adFormat: 'interstitial'
+        });
+        adexiumWidget.init();
+    } catch (error) {
+        console.error("Adexium failed to load:", error);
+    }
+});
+
+                
 </body>
 </html>
